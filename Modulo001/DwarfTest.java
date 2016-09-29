@@ -9,9 +9,9 @@ import org.junit.Test;
 public class DwarfTest
 {
     @Test
-    public void dwarfNasceCom110Vida(){
+    public void dwarfNasceVivo(){
         Dwarf gimli = new Dwarf();
-        assertEquals(110, gimli.getVida());
+        assertEquals(Status.VIVO, gimli.getStatus());
     }
     
     @Test
@@ -52,7 +52,7 @@ public class DwarfTest
         gimli.perderVida();
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(-90, gimli.getVida());
+        assertEquals(0, gimli.getVida());
     }
     
     @Test 
@@ -113,7 +113,28 @@ public class DwarfTest
         // Act 
         double resultado = balin.getNumeroSorte(); 
         // Assert 
-        assertEquals(101.0, resultado, .0); 
+        assertEquals(101.0, resultado, .0);
     }
+    
+    @Test
+    public void ZerarVidaEMudarStatus(){
+        Dwarf balin = new Dwarf("Balin", new DataTerceiraEra(1, 1, 2015));
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        balin.perderVida();
+        assertEquals(0,(balin.getVida()));
+        assertEquals(Status.MORTO,(balin.getStatus()));
+        
+    
+   }
 }
 

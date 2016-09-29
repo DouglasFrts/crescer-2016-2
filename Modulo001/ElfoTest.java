@@ -293,4 +293,11 @@ public class ElfoTest
         Elfo elrond = new Elfo("Elrond", 0);
         assertEquals(0,elrond.getFlecha().getQuantidade());
     }
+    
+    @Test
+    public void elfoNasceVivo(){
+        Elfo elfo = new Elfo("Legolas");
+        assertEquals(Status.VIVO,(elfo.getStatus()));
+    
+    }
 } 
