@@ -29,9 +29,9 @@ public class ElfoTest
     @Test
     public void elfoNasceCom42Flechas(){ 
         //Arrange 
-        Item arco = new Item("Flechas",42); 
+        //Item flecha = new Item("Flechas",42); 
         //Act 
-        Elfo elfoDoTeste = new Elfo("Legolas"); 
+        Elfo elfoDoTeste = new Elfo("Legolas");
         //Assert 
         assertEquals("Flechas", elfoDoTeste.getFlecha().getDescricao()); 
         assertEquals(42, elfoDoTeste.getFlecha().getQuantidade()); 

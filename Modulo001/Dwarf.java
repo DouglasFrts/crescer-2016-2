@@ -4,6 +4,7 @@ public class Dwarf
     private String nome;
     private DataTerceiraEra dataNascimento;
     private Status status;
+    private Inventario inventario;
 
     // java type initializer 
     // vai ser replicado para cada construtor 
@@ -19,6 +20,7 @@ public class Dwarf
         this.nome = nome; 
         this.dataNascimento = dataNascimento;
         this.status = Status.VIVO;
+        this.inventario = new Inventario();
     }
     
     
@@ -47,6 +49,10 @@ public class Dwarf
         return this.nome; 
     }
     
+    public Inventario getInventario(){
+        return this.inventario;
+    }
+    
     public Status getStatus(){
         return status;
     }
@@ -69,4 +75,21 @@ public class Dwarf
         
         return resultado;
     }
+    
+    public void adicionarItem(Item item){
+        this.inventario.adicionarItem(item);
+    }
+    
+    public void perderItem(Item item){
+        this.inventario.removerItem(item);
+    }
+    
+    public void tentarSorte() { 
+        boolean temSorte = getNumeroSorte() == -3333; 
+        if (temSorte) { 
+            this.inventario.aumentarUnidadesDosItens(1000); 
+        } 
+    }
+    
+    
 }
