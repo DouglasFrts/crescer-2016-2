@@ -9,8 +9,6 @@ public class Elfo extends Personagem{
         super(nome); 
         this.inventario.adicionarItem(new Item("Arco", 1));
         this.inventario.adicionarItem(new Item("Flechas", quantidadeDeFlechas >=0 ? quantidadeDeFlechas : 42));
-        status = Status.VIVO;
-
     }
     
     public void atirarFlecha(Dwarf dwarf) {
