@@ -42,6 +42,14 @@ public class Inventario
         }
   }
   
+  public void aumentarUnidadesProporcionalQuantidadePorItem() { 
+        for (Item item : this.itens) { 
+            item.aumentarProporcionalQuantidade(); 
+        }
+        
+  }
+    
+  
   public Item getItemComMaiorQuantidade() { 
         // maiorAteAgora = 0 
         // percorro todos os itens verificando se existe alguém maior que o até agora 
@@ -65,18 +73,18 @@ public class Inventario
         
         Item aux;
         
-        for(int i=0;i<itens.size();i++){
-            
-            for(int j=i+1; j<itens.size();j++){
-                if(itens.get(j).getQuantidade() < itens.get(i).getQuantidade()){
-                    
-                    aux=itens.get(j);
-                    itens.set(j,itens.get(i));
-                    itens.set(i,aux);
+            for(int i=0;i<itens.size();i++){
+                
+                for(int j=i+1; j<itens.size();j++){
+                    if(itens.get(j).getQuantidade() < itens.get(i).getQuantidade()){
+                        
+                        aux=itens.get(j);
+                        itens.set(j,itens.get(i));
+                        itens.set(i,aux);
+                    }
                 }
             }
-        }
-        
+     
     }
   
   

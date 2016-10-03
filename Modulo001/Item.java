@@ -22,6 +22,15 @@ public class Item {
         quantidade += unidades;
     }
     
+    public void aumentarProporcionalQuantidade(){
+        
+        int quantidadeAbsoluta = Math.abs(this.quantidade);
+        int resultado = quantidadeAbsoluta * (quantidadeAbsoluta+1)/2;
+        this.quantidade += (resultado * 1000); 
+
+        
+    }
+    
 }
 
 
