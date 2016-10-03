@@ -110,6 +110,23 @@ public class InventarioTest
     }
     
     @Test 
+    public void OrdenarInventarioPorQuantidadeComParametroAscendente() { 
+        Inventario inventario = criarInventarioCom3Itens(); 
+        inventario.ordenarItens(TipoOrdenacao.ASCENDENTE);
+        assertEquals(2, inventario.getItens().get(0).getQuantidade()); 
+        assertEquals(3, inventario.getItens().get(1).getQuantidade()); 
+        assertEquals(45, inventario.getItens().get(2).getQuantidade());
+    }
+    
+    public void OrdenarInventarioPorQuantidadeComParametroDescendente() { 
+        Inventario inventario = criarInventarioCom3Itens(); 
+        inventario.ordenarItens(TipoOrdenacao.DESCENDENTE);
+        assertEquals(45, inventario.getItens().get(0).getQuantidade()); 
+        assertEquals(3, inventario.getItens().get(1).getQuantidade()); 
+        assertEquals(2, inventario.getItens().get(2).getQuantidade());
+    }
+    
+    @Test 
     public void aumentarUnidadesProporcionalComInventarioVazio() { 
         Inventario inventario = new Inventario(); 
         inventario.aumentarUnidadesProporcionalQuantidadePorItem(); 

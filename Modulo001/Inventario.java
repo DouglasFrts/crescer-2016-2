@@ -86,6 +86,39 @@ public class Inventario
             }
      
     }
+    
+    public void ordenarItens(TipoOrdenacao tipoOrdenacao){
+        
+        Item aux;
+        if (tipoOrdenacao == TipoOrdenacao.ASCENDENTE) {
+
+            for(int i=0;i<itens.size();i++){
+                
+                for(int j=i+1; j<itens.size();j++){
+                    if(itens.get(j).getQuantidade() < itens.get(i).getQuantidade()){
+                        
+                        aux=itens.get(j);
+                        itens.set(j,itens.get(i));
+                        itens.set(i,aux);
+                    }
+                }
+            }
+        }else if(tipoOrdenacao == TipoOrdenacao.DESCENDENTE){
+            
+            for(int i=0;i<itens.size();i++){
+                
+                for(int j=i+1; j<itens.size();j++){
+                    if(itens.get(j).getQuantidade() > itens.get(i).getQuantidade()){
+                        
+                        aux=itens.get(j);
+                        itens.set(j,itens.get(i));
+                        itens.set(i,aux);
+                    }
+                }
+            }
+        }
+     
+    }
   
   
 }
