@@ -60,6 +60,24 @@ public class Inventario
         boolean temItens = !itens.isEmpty(); 
         return temItens ? itens.get(indice) : null; 
     } 
+    
+    public void ordenarItens(){
+        
+        Item aux;
+        
+        for(int i=0;i<itens.size();i++){
+            
+            for(int j=i+1; j<itens.size();j++){
+                if(itens.get(j).getQuantidade() < itens.get(i).getQuantidade()){
+                    
+                    aux=itens.get(j);
+                    itens.set(j,itens.get(i));
+                    itens.set(i,aux);
+                }
+            }
+        }
+        
+    }
   
   
 }

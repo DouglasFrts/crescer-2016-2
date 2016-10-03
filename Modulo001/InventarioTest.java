@@ -100,6 +100,15 @@ public class InventarioTest
     
     }
     
+    @Test 
+    public void OrdenarInventarioPorQuantidade() { 
+        Inventario inventario = criarInventarioCom3Itens(); 
+        inventario.ordenarItens();
+        assertEquals(2, inventario.getItens().get(0).getQuantidade()); 
+        assertEquals(3, inventario.getItens().get(1).getQuantidade()); 
+        assertEquals(45, inventario.getItens().get(2).getQuantidade());
+    }
+    
     private Inventario criarInventarioCom3Itens() { 
         Inventario inventario = new Inventario(); 
         inventario.adicionarItem(new Item("Espada de aço", 2)); 
