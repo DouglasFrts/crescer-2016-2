@@ -1,10 +1,8 @@
-public class Dwarf
+public class Dwarf extends Personagem
 {
-    private int vida, experiencia;
-    private String nome;
+    private int vida;
     private DataTerceiraEra dataNascimento;
-    private Status status;
-    private Inventario inventario;
+    
 
     // java type initializer 
     // vai ser replicado para cada construtor 
@@ -17,10 +15,8 @@ public class Dwarf
     } 
  
     public Dwarf(String nome, DataTerceiraEra dataNascimento) { 
-        this.nome = nome; 
+        super(nome); 
         this.dataNascimento = dataNascimento;
-        this.status = Status.VIVO;
-        this.inventario = new Inventario();
     }
     
     
@@ -41,21 +37,10 @@ public class Dwarf
         return vida;
     }
     
-    public int getExperiencia() { 
-        return experiencia; 
-    } 
     
-    public String getNome() { 
-        return this.nome; 
-    }
+ 
     
-    public Inventario getInventario(){
-        return this.inventario;
-    }
     
-    public Status getStatus(){
-        return status;
-    }
     
     public DataTerceiraEra getDataNascimento() { 
         return this.dataNascimento; 
