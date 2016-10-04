@@ -1,21 +1,20 @@
 public class Dwarf extends Personagem
 {
-    protected int vida;
+    
     protected DataTerceiraEra dataNascimento;
     
 
     // java type initializer 
     // vai ser replicado para cada construtor 
-    { 
-        vida = 110; 
-    } 
+     
     
     public Dwarf() { 
         this(null, new DataTerceiraEra(1,1,1)); 
     } 
  
     public Dwarf(String nome, DataTerceiraEra dataNascimento) { 
-        super(nome); 
+        super(nome);
+        this.vida = 110;
         this.dataNascimento = dataNascimento;
     }
     
@@ -32,10 +31,7 @@ public class Dwarf extends Personagem
             status = Status.MORTO;
     }
     
-    public int getVida()
-    {
-        return vida;
-    }
+    
     
     
  
@@ -61,13 +57,7 @@ public class Dwarf extends Personagem
         return resultado;
     }
     
-    public void adicionarItem(Item item){
-        this.inventario.adicionarItem(item);
-    }
-    
-    public void perderItem(Item item){
-        this.inventario.removerItem(item);
-    }
+   
     
     public void tentarSorte() { 
         boolean temSorte = getNumeroSorte() == -3333; 

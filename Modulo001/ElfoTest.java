@@ -178,7 +178,7 @@ public class ElfoTest
         Elfo elfo = new Elfo("Elfo");
         Dwarf balin = new Dwarf();
         elfo.atirarFlecha(balin);
-        assertEquals(100, balin.getVida());
+        assertEquals(100, balin.getVida(),0.);
     }
     
     @Test
@@ -188,7 +188,7 @@ public class ElfoTest
         Dwarf balin = new Dwarf();
         elfo.atirarFlecha(balin);
         elfo.atirarFlecha(balin);
-        assertEquals(90, balin.getVida());
+        assertEquals(90, balin.getVida(),0.);
     }
     
     @Test
@@ -199,8 +199,8 @@ public class ElfoTest
         Dwarf dwarf = new Dwarf();
         elfo.atirarFlecha(balin);
         elfo.atirarFlecha(dwarf);
-        assertEquals(100, balin.getVida());
-        assertEquals(100, dwarf.getVida());
+        assertEquals(100, balin.getVida(),0.);
+        assertEquals(100, dwarf.getVida(),0.);
     }
     
     @Test

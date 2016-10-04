@@ -6,7 +6,8 @@ public class Elfo extends Personagem{
     }
     
     public Elfo(String nome, int quantidadeDeFlechas) {
-        super(nome); 
+        super(nome);
+        this.vida = 100;
         this.inventario.adicionarItem(new Item("Arco", 1));
         this.inventario.adicionarItem(new Item("Flechas", quantidadeDeFlechas >=0 ? quantidadeDeFlechas : 42));
     }

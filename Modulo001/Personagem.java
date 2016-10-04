@@ -4,6 +4,7 @@ public class Personagem
     protected int experiencia;
     protected Status status;
     protected Inventario inventario;
+    protected double vida;
 
     public Personagem(String nome){
         this.nome = nome;
@@ -29,6 +30,19 @@ public class Personagem
     
     public Inventario getInventario(){
         return this.inventario;
+    }
+    
+    public double getVida()
+    {
+        return vida;
+    }
+    
+    public void adicionarItem(Item item){
+        this.inventario.adicionarItem(item);
+    }
+    
+    public void perderItem(Item item){
+        this.inventario.removerItem(item);
     }
 
 }

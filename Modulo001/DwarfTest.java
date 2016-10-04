@@ -19,7 +19,7 @@ public class DwarfTest
     public void dwarfPerdeVidaUmaVez(){
         Dwarf gimli = new Dwarf();
         gimli.perderVida();
-        assertEquals(100, gimli.getVida());
+        assertEquals(100, gimli.getVida(),0.);
     }
     
     @Test
@@ -27,7 +27,7 @@ public class DwarfTest
         Dwarf gimli = new Dwarf();
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(90, gimli.getVida());
+        assertEquals(90, gimli.getVida(),0.);
     }
     
     @Test
@@ -53,7 +53,7 @@ public class DwarfTest
         gimli.perderVida();
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(0, gimli.getVida());
+        assertEquals(0, gimli.getVida(),0.);
     }
     
     @Test 
@@ -132,7 +132,7 @@ public class DwarfTest
         balin.perderVida();
         balin.perderVida();
         balin.perderVida();
-        assertEquals(0,(balin.getVida()));
+        assertEquals(0,(balin.getVida()),0.);
         assertEquals(Status.MORTO,(balin.getStatus()));
         
     
