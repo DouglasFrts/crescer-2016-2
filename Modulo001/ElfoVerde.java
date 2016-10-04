@@ -5,11 +5,14 @@ public class ElfoVerde extends Elfo {
     public ElfoVerde(String nome) { 
         super(nome); 
     } 
+    
+    public ElfoVerde(String nome, int quantidadeFlechas) { 
+        super(nome, quantidadeFlechas); 
+    }
  
     public void atirarFlecha(Dwarf dwarf) { 
-        super.atirarFlecha(dwarf); 
-        this.experiencia++;
-       
+        super.atirarFlecha(dwarf, 2); 
+        
     } 
  
     public void adicionarItem(Item item) { 

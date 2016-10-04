@@ -32,5 +32,14 @@ public class ElfoNoturnoTest
         assertEquals(85.7375, elfoNoturno.getVida(), 0.);
         
     }
+    
+    @Test 
+    public void elfoNoturnoNaoAtiraSeEstaMorto() { 
+        ElfoNoturno elfoSuiçida = new ElfoNoturno("Harakiri", 91); 
+        for (int i = 0; i < 91; i++) 
+            elfoSuiçida.atirarFlecha(new Dwarf("Joe Doein", new DataTerceiraEra(1,1,1))); 
+         
+        assertEquals(270, elfoSuiçida.getExperiencia()); 
+    }
 
 }

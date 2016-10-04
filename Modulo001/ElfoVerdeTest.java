@@ -108,8 +108,17 @@ public class ElfoVerdeTest
         sortudo.adicionarItem(arcoEFlecha); 
         sortudo.adicionarItem(descricaoNula); 
         assertEquals(3, sortudo.getInventario().getItens().size()); 
-        assertEquals(arcoEFlecha, sortudo.getInventario().getItens().get(2)); 
+        assertEquals(arcoEFlecha, sortudo.getInventario().getItens().get(2));
     }
+        
+    @Test 
+    public void elfoVerdeGanhaExperienciaMesmoNaoTendoFlechas() { 
+        ElfoVerde greenLegolas = new ElfoVerde("Green Legolas", 1); 
+        greenLegolas.atirarFlecha(new Dwarf()); 
+        greenLegolas.atirarFlecha(new Dwarf()); 
+        assertEquals(2, greenLegolas.getExperiencia()); 
+    }
+    
     
   
 } 

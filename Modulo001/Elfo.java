@@ -12,11 +12,11 @@ public class Elfo extends Personagem{
         this.inventario.adicionarItem(new Item("Flechas", quantidadeDeFlechas >=0 ? quantidadeDeFlechas : 42));
     }
     
-    public void atirarFlecha(Dwarf dwarf) {
+    public void atirarFlecha(Dwarf dwarf, int xp) {
         boolean temFlecha = getFlecha().getQuantidade()>0;
         if(temFlecha){
             getFlecha().setQuantidade(getFlecha().getQuantidade() - 1);
-            this.experiencia++;
+            this.experiencia+= 1*xp;
             dwarf.perderVida();
         }
     }
