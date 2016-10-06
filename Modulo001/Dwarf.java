@@ -30,14 +30,7 @@ public class Dwarf extends Personagem
         if(getVida() == 0)
             status = Status.MORTO;
     }
-    
-    
-    
-    
- 
-    
-    
-    
+        
     public DataTerceiraEra getDataNascimento() { 
         return this.dataNascimento; 
     } 
@@ -57,8 +50,6 @@ public class Dwarf extends Personagem
         return resultado;
     }
     
-   
-    
     public void tentarSorte() { 
         boolean temSorte = getNumeroSorte() == -3333; 
         if (temSorte) { 
@@ -66,5 +57,6 @@ public class Dwarf extends Personagem
         } 
     }
     
-    
+    public void inicializarInventario(int quantidadeFlechas) { } 
+
 }
