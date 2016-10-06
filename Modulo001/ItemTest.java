@@ -25,4 +25,9 @@ public class ItemTest {
         elderScroll.aumentarUnidades(-1); 
         assertEquals(6, elderScroll.getQuantidade()); 
     } 
+    
+    @Test 
+    public void igualdadeDeItens() { 
+        assertEquals(new Item("Espada Z", 1), new Item("Espada Z", 1)); 
+    }
 } 
