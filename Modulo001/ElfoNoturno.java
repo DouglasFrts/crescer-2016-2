@@ -11,8 +11,8 @@ public class ElfoNoturno extends Elfo {
     }
  
     public void atirarFlecha(Dwarf dwarf) { 
-       if(this.status == Status.VIVO){
-            super.atirarFlecha(dwarf, 3); 
+       if(this.status == Status.VIVO && getFlecha().getQuantidade() > 0){
+            super.atirarFlechas(dwarf, 3); 
             double vidaAPerder = this.vida*0.05;
             this.vida-=vidaAPerder;
             this.status = this.vida < 1 ? Status.MORTO : this.status;
