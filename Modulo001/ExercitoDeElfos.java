@@ -1,7 +1,7 @@
 //Estudar em casa copiado da correção de exercicios
 import java.util.ArrayList; 
  
-public class ExercitoDeElfos { 
+public class ExercitoDeElfos implements Exercito{ 
     private ArrayList<Elfo> contingente; 
  
     public ExercitoDeElfos() { 
@@ -59,5 +59,9 @@ public class ExercitoDeElfos {
         } 
          
         return resultado; 
+    }
+    
+    public void atacar() { 
+        System.out.println("Exercito normal atacando!"); 
     } 
 }
