@@ -1,58 +1,67 @@
-public class Elfo {
-    private String nome;
-    private Item arco;
-    private Item flecha;
-    private int experiencia;
+public class Elfo extends Personagem {
+
+    private static int contadorDeElfos;
     
     public Elfo(String n) {
         // Chamando construtor debaixo
         this(n, 42);
     }
-    
+
     public Elfo(String nome, int quantidadeFlechas) {
-        this.nome = nome;
-        arco = new Item("Arco", 1);
-        flecha = new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
+        super(nome);
+        this.vida = 100;
+        this.inicializarInventario(quantidadeFlechas);
+        Elfo.contadorDeElfos++;
     }
-
-    public void setNome(String n) {
-        nome = n;
+    
+    // ~Elfo() { }
+    // https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#finalize()
+    protected void finalize() throws Throwable {
+        super.finalize();
+        Elfo.contadorDeElfos--;
     }
-
-    public String getNome() {
-        return nome;
+    
+    public static int getContadorDeElfos() {
+        return Elfo.contadorDeElfos;
     }
 
     public Item getArco() {
-        return arco;
-    }
-
-    public int getExperiencia() {
-        return experiencia;
+        return this.inventario.getItens().get(0);
     }
 
     public Item getFlecha() {
-        return flecha;
+        return this.inventario.getItens().get(1);
     }
 
     public void atirarFlecha(Dwarf dwarf) {
-        boolean temFlecha = flecha.getQuantidade() > 0;
+        atirarFlechas(dwarf, 1);
+    }
+
+    protected void atirarFlechas(Dwarf dwarf, int fatorExperiencia) {
+        int quantidadeFlechas = getFlecha().getQuantidade();
+        boolean temFlecha = quantidadeFlechas > 0;
         if (temFlecha) {
-            flecha.setQuantidade(flecha.getQuantidade() - 1);
-            experiencia++;
+            getFlecha().setQuantidade(quantidadeFlechas - 1);
+            experiencia += 1 * fatorExperiencia;
             dwarf.perderVida();
         }
+    }
+
+    protected void inicializarInventario(int quantidadeFlechas) {
+        this.inventario.adicionarItem(new Item("Arco", 1));
+        this.inventario.adicionarItem(new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
     }
 
     public String toString() {
         //return "<nome> possui <flechas> flechas e <exp> níveis de experiência.";
 
-        boolean flechaNoSingular = this.flecha.getQuantidade() == 1;
+        int quantidadeFlechas = this.getFlecha().getQuantidade();
+        boolean flechaNoSingular = quantidadeFlechas == 1;
         boolean experienciaNoSingular = this.experiencia == 0 || this.experiencia == 1;
 
         return String.format("%s possui %d %s e %d %s de experiência.",
             this.nome,
-            this.flecha.getQuantidade(),
+            quantidadeFlechas,
             // ?:
             flechaNoSingular ? "flecha" : "flechas",
             this.experiencia,
