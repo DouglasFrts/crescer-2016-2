@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Corrida
 {
-    public class Kart
+    public abstract class Kart
     {
         public Kart(Corredor corredor)
         {
@@ -16,8 +16,8 @@ namespace Corrida
             this.Equipamentos = new List<IEquipamento>();
         }
 
-        private Corredor corredor { get; set; }
-        private List<IEquipamento> Equipamentos { get; set; }
+        protected Corredor corredor { get; set; }
+        protected List<IEquipamento> Equipamentos { get; set; }
         private int velocidade = 3;
         
         public virtual int Velocidade
