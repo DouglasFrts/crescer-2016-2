@@ -1,4 +1,4 @@
-﻿using ConsoleApplication3.Enums;
+﻿using Corrida.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +9,10 @@ namespace Corrida
 {
     public class Corredor
     {
-        enum Niveis
-        {
-            
-        };
-
+        
         public Corredor(String nome, NivelHabilidade nivel){
            this.Nome = nome;
-            this.Nivel = nivel;
+           this.Nivel = nivel;
             
         }
 

@@ -1,13 +1,20 @@
-﻿using System;
+﻿using Corrida.Equipamentos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication3.Equipamentos
+namespace Corrida.Equipamentos
 {
-    public class MotorABaseDeLava
+    public class MotorABaseDeLava : IEquipamento
     {
-
+        public int BonusVelocidade
+        {
+            get
+            {
+                return 2;
+            }
+        }
     }
 }

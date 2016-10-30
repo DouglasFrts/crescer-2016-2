@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Corrida.Enums
+namespace CorridaTests
 {
-    public enum  NivelHabilidade
+    [TestClass]
+    public class KartTest
     {
-        Noob = 3,
-        Mediano = 5,
-        Profissional = 6
-    };
+        [TestMethod]
+        
+        }
+    }
 }

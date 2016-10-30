@@ -4,9 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication3.Equipamentos
+namespace Corrida.Equipamentos
 {
-    class PneusDeCouroDeDragao
+    public class PneusDeCouroDeDragao : IEquipamento
     {
+        public int BonusVelocidade
+        {
+            get
+            {
+                return 3; ;
+            }
+        }
     }
 }
