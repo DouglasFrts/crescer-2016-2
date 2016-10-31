@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3EA99D13-0236-49FC-9939-9D444709E43E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{72E9DF9E-B7EB-4538-BC28-CE656FBA1E09}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication3</RootNamespace>
-    <AssemblyName>ConsoleApplication3</AssemblyName>
+    <RootNamespace>Repositorio</RootNamespace>
+    <AssemblyName>Repositorio</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,25 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dinam.cs" />
-    <Compile Include="Corredor.cs" />
-    <Compile Include="Enums\NivelHabilidade.cs" />
-    <Compile Include="Equipamentos\FogueteDePlutonio.cs" />
-    <Compile Include="Equipamentos\MotorABaseDeLava.cs" />
-    <Compile Include="Equipamentos\IEquipamento.cs" />
-    <Compile Include="Equipamentos\PneusDeCouroDeDragao.cs" />
-    <Compile Include="Equipamentos\UltraPack.cs" />
-    <Compile Include="Kart.cs" />
-    <Compile Include="Light.cs" />
+    <Compile Include="RepositorioFuncionarios.cs" />
+    <Compile Include="Funcionario\Cargo.cs" />
+    <Compile Include="Funcionario\Funcionario.cs" />
+    <Compile Include="Funcionario\TurnoTrabalho.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkyFusion.cs" />
-    <Compile Include="Sonnar.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
