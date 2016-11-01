@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerraMediaTestes", "TerraMediaTestes\TerraMediaTestes.csproj", "{A8471FFE-CD23-4AF0-B167-987F2DFAC236}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerraMedia", "TerraMedia\TerraMedia.csproj", "{34C73CEA-DCEF-472F-B332-2CE2186D91A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8471FFE-CD23-4AF0-B167-987F2DFAC236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8471FFE-CD23-4AF0-B167-987F2DFAC236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8471FFE-CD23-4AF0-B167-987F2DFAC236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8471FFE-CD23-4AF0-B167-987F2DFAC236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C73CEA-DCEF-472F-B332-2CE2186D91A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C73CEA-DCEF-472F-B332-2CE2186D91A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C73CEA-DCEF-472F-B332-2CE2186D91A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C73CEA-DCEF-472F-B332-2CE2186D91A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
